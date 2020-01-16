@@ -31,7 +31,7 @@ public class Flywheel
         bottomFlywheel = flyMap.get(DcMotorSimple.class, "flyBottom");
         ballFeed = flyMap.crservo.get("flyFeed");
 
-        topFlywheel.setDirection(DcMotorSimple.Direction.REVERSE);
+        bottomFlywheel.setDirection(DcMotorSimple.Direction.REVERSE);
 
         /*topFlywheel.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         bottomFlywheel.setMode(DcMotor.RunMode.RUN_USING_ENCODER);*/

@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode.subsys;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.util.Range;
 
 import org.firstinspires.ftc.teamcode.lib.util.Toggler;
 
@@ -76,6 +77,20 @@ public class TileRunner  {
         backLeft.setPower(leftPower);
         frontRight.setPower(rightPower);
         backRight.setPower(rightPower);
+    }
+
+    public void operateArcade(double x, double y){
+        double yValue = y * -1;
+        double xValue = x * -1;
+
+        double leftPower =  yValue - xValue;
+        double rightPower = yValue + xValue;
+
+        frontLeft.setPower(Range.clip(leftPower, -1.0, 1.0));
+        backLeft.setPower(Range.clip(leftPower, -1.0, 1.0));
+        frontRight.setPower(Range.clip(rightPower, -1.0, 1.0));
+        backRight.setPower(Range.clip(rightPower, -1.0, 1.0));
+
     }
 
 

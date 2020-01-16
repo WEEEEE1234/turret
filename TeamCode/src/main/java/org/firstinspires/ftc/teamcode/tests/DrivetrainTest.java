@@ -13,7 +13,7 @@ import org.firstinspires.ftc.teamcode.subsys.TileRunner;
 /**
  * Created by Amar2 on 10/21/2017.
  */
-@TeleOp(name = "drivetrainTest", group = "tests")
+@TeleOp(name = "DrivetrainTest", group = "tests")
 public class DrivetrainTest extends OpMode {
 
     TileRunner drivetrain;
